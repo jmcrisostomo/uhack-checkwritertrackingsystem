@@ -32,3 +32,17 @@ dependencies {
     compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     testCompile 'junit:junit:4.12'
 }
+
+
+dependencies {
+    compile 'com.beardedhen:androidbootstrap:2.0.1'
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="uhack.ypsquad.checkwritertrackingsystem.loginUser"
+    tools:showIn="@layout/activity_login_user">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logo Here"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="10dp"
+            app:bootstrapBrand="info"
+            app:roundedCorners="true"
+            app:bootstrapSize="lg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/bootstrapEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_marginBottom="25dp"
+            app:bootstrapBrand="info"
+            app:roundedCorners="true"
+            app:bootstrapSize="lg" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:roundedCorners="true"
+            app:showOutline="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/bootstrapButton2" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
