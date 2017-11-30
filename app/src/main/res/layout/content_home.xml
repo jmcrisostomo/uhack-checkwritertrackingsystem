@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="uhack.ypsquad.checkwritertrackingsystem.home"
     tools:layout_editor_absoluteY="81dp"
-    tools:showIn="@layout/app_bar_home"
-    android:orientation="vertical">
+    tools:showIn="@layout/app_bar_home">
 
     <!--profile-->
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="152dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
@@ -25,9 +25,10 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 app:srcCompat="@mipmap/ic_launcher" />
         </RelativeLayout>
 
@@ -35,23 +36,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="15dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Currency: "
-                    android:layout_marginRight="5dp"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:text="Currency: " />-->
                 <!--spinner wala pang laman dunno what dis is-->
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></Spinner>
+                <!--<Spinner-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"></Spinner>-->
             </LinearLayout>
 
 
@@ -59,283 +60,481 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="JM Crisostomo"
-                android:textSize="24dp"/>
+                android:text="Branch Manager Name"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Branch Manager"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Last Login: dd/mm/yyyy hh:mm:ss"
+                android:textSize="10dp" />
+
+
 
             <!--cash balance-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pending Balance:"
-                android:layout_marginTop="5dp"
-                android:textSize="12dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="₱ 4,500.00"
-                android:textSize="24dp"/>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="Pending Balance:"-->
+                <!--android:textSize="12dp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="₱ 4,500.00"-->
+                <!--android:textSize="24dp" />-->
         </LinearLayout>
 
     </LinearLayout>
 
     <!--content-->
-    <ScrollView
-        android:layout_width="368dp"
-        android:layout_height="168dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="165dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <TableLayout
-            android:layout_width="368dp"
-            android:layout_height="339dp"
-            android:background="@color/colorTableContent"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="165dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTableContent">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:background="@color/colorTableHeader">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorTableHeader"
+                        android:padding="5dp"
+                        android:text="Branch #"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp"></TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorTableHeader"
+                        android:padding="5dp"
+                        android:text="Branch Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp"></TextView>
+                </RelativeLayout>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/colorTableHeader"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="5dp"-->
+                <!--android:text="Money Transferred"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textSize="12dp"></TextView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorTableHeader"
+                        android:padding="5dp"
+                        android:text="Status"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp"></TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorTableHeader"
+                        android:padding="5dp"
+                        android:text="Action"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp"></TextView>
+                </RelativeLayout>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/colorTableHeader"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="5dp"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textSize="12dp"></TextView>-->
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tl_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTableContent">
             <!--table header-->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <!--header 1-->
-
-                <!--<TextView-->
+            <!--<TableRow-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:text="Hello"-->
-                <!--android:layout_column="1"/>-->
+                <!--android:layout_marginVertical="5dp"-->
+                <!--android:background="@color/colorTableHeader">-->
 
-                <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="World"-->
-                <!--android:layout_column="2"/>-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@color/colorTableHeader"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Branch #"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                        <!--android:textSize="12dp"></TextView>-->
+                <!--</RelativeLayout>-->
 
-                <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_column="3"-->
-                <!--android:text="Niggas" />-->
-                <!--header 2-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
 
-                <!--header 3-->
-                <!--header 4-->
-            </TableRow>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@color/colorTableHeader"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Branch Name"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                        <!--android:textSize="12dp"></TextView>-->
+                <!--</RelativeLayout>-->
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colorTableHeader"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:padding="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Money Transferred"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textAppearance="?android:attr/textAppearanceMedium"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="12dp"></TextView>&ndash;&gt;-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorTableHeader"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Transaction #"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@color/colorTableHeader"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Status"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                        <!--android:textSize="12dp"></TextView>-->
+                <!--</RelativeLayout>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorTableHeader"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Name"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorTableHeader"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Money Transferred"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:background="@color/colorTableHeader"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Action"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                        <!--android:textSize="12dp"></TextView>-->
+                <!--</RelativeLayout>-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorTableHeader"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Status"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorTableHeader"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Date"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
-            </TableRow>
-
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colorTableHeader"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:padding="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text=""&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textAppearance="?android:attr/textAppearanceMedium"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="12dp"></TextView>&ndash;&gt;-->
+            <!--</TableRow>-->
             <!--table content-->
+
             <!--table entry 1-->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center">
+                android:layout_marginVertical="3dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="TRN-0001"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1"
+                    android:gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="BR-0001"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Juan Dela Cruz"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Juan Dela Cruz"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="₱ 100.00"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="Success"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#8BC34A"
+                        android:textSize="12dp" />
+                </RelativeLayout>
 
-                    android:text="Success"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#8BC34A"
 
-                    android:textSize="12dp"></TextView>
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="5dp"-->
+                <!--android:text="₱ 100.00"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textSize="12dp"></TextView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="2017-11-16 18:40:04"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Info"
+                        app:bootstrapBrand="info"
+                        app:bootstrapSize="sm"
+                        app:buttonMode="regular"
+                        app:fontAwesomeIcon="fa_info_circle"
+                        app:roundedCorners="true"
+                        app:showOutline="false" />
+                </RelativeLayout>
             </TableRow>
             <!--table entry 2-->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center">
+                android:layout_marginVertical="3dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="TRN-0002"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="BR-0002"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Pedro Del Rosario"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Miguel Malvar"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="₱ 400.00"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="Pending"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF9800"
+                        android:textSize="12dp" />
+                </RelativeLayout>
 
-                    android:text="Pending"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#FF9800"
 
-                    android:textSize="12dp"></TextView>
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="5dp"-->
+                <!--android:text="₱ 100.00"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textSize="12dp"></TextView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="2017-11-16 18:40:04"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Info"
+                        app:bootstrapBrand="info"
+                        app:bootstrapSize="sm"
+                        app:buttonMode="regular"
+                        app:fontAwesomeIcon="fa_info_circle"
+                        app:roundedCorners="true"
+                        app:showOutline="false" />
+                </RelativeLayout>
             </TableRow>
             <!--table entry 3-->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center">
+                android:layout_marginVertical="3dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="TRN-0003"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="BR-0003"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Jose Peralta"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Leon Guerrero"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="₱ 1,500.00"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="Cancelled"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#F44336"
+                        android:textSize="12dp" />
+                </RelativeLayout>
 
-                    android:text="Cancelled"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#F44336"
 
-                    android:textSize="12dp"></TextView>
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="5dp"-->
+                <!--android:text="₱ 100.00"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textSize="12dp"></TextView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="2017-11-16 18:40:04"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="12dp"></TextView>
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Info"
+                        app:bootstrapBrand="info"
+                        app:bootstrapSize="sm"
+                        app:buttonMode="regular"
+                        app:fontAwesomeIcon="fa_info_circle"
+                        app:roundedCorners="true"
+                        app:showOutline="false" />
+                </RelativeLayout>
             </TableRow>
         </TableLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>
