@@ -127,12 +127,20 @@ public class home extends AppCompatActivity
     public void generateTables(){
         TableLayout tl_1 = (TableLayout) findViewById(R.id.tl_home);
 
+
         String[] names = {"Jonel","Ryan","Jeff","Matt"};
 
         for (int i = 0; i < 4; i++){
             TableRow row = new TableRow(this);
-            TableRow.LayoutParams lp = new TableRow.LayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
+            //TableRow.LayoutParams lp = new TableRow.LayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
+            TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             row.setLayoutParams(lp);
+
+            //LinearLayout ll_1 = new LinearLayout(this);
+            //LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+            //LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            //ll_1.setLayoutParams(llp);
+            //ll_1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f));
 
             TextView textView_1 = new TextView(this);
 //            textView_1.setLayoutParams(new LinearLayout.LayoutParams(
@@ -149,7 +157,9 @@ public class home extends AppCompatActivity
             textView_1.setTextAppearance(this, android.R.style.TextAppearance_DeviceDefault_Medium);
             textView_1.setPadding(5, 5, 5, 5);
             textView_1.setTextSize(12);
-            textView_1.setGravity(Gravity.CENTER);
+            textView_1.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1.0f));
+            textView_1.setGravity(Gravity.CENTER_HORIZONTAL);
+            //textView_1.W
 
             //cell.addView(textView_1);
 //            LinearLayout linearLayout_1 = new LinearLayout(this);
@@ -171,7 +181,8 @@ public class home extends AppCompatActivity
             textView_2.setTextAppearance(this, android.R.style.TextAppearance_DeviceDefault_Medium);
             textView_2.setPadding(5, 5, 5, 5);
             textView_2.setTextSize(12);
-            textView_2.setGravity(Gravity.CENTER);
+            textView_2.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1.0f));
+            textView_2.setGravity(Gravity.CENTER_HORIZONTAL);
 //            LinearLayout linearLayout_2 = new LinearLayout(this);
 //            linearLayout_2.setGravity(Gravity.CENTER);
 //            //LinearLayout.LayoutParams layoutParams_1 = new LinearLayout.LayoutParams();
@@ -184,10 +195,12 @@ public class home extends AppCompatActivity
 
             //branch status
             TextView textView_3 = new TextView(this);
-            textView_3.setText("Status Null");
+            textView_3.setText("Status");
             textView_3.setTextAppearance(this, android.R.style.TextAppearance_DeviceDefault_Medium);
             textView_3.setPadding(5, 5, 5, 5);
             textView_3.setTextSize(12);
+            textView_3.setGravity(Gravity.CENTER_HORIZONTAL);
+            textView_3.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 1.0f));
 
             //action buttons
             Button button = new Button(this);
@@ -201,6 +214,9 @@ public class home extends AppCompatActivity
             bootstrapButton.setShowOutline(false);
             bootstrapButton.setFontAwesomeIcon(FontAwesome.FA_INFO_CIRCLE);
             bootstrapButton.setId(i);
+            bootstrapButton.setGravity(Gravity.CENTER_HORIZONTAL);
+            bootstrapButton.setPadding(5, 5, 5, 5);
+            bootstrapButton.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 1.0f));
 //                    button.setRounded(true);
 //            button.setShowOutline(false);
 //            button.setFontAwesomeIcon(FontAwesome.FA_ANDROID);
@@ -215,8 +231,10 @@ public class home extends AppCompatActivity
                 }
             });
 
-
+            //ll_1.addView(textView_1);
+            //ll_1.addView(textView_1);
             row.addView(textView_1);
+            //row.addView(textView_1);
             row.addView(textView_2);
             row.addView(textView_3);
             row.addView(bootstrapButton);

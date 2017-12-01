@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="uhack.ypsquad.checkwritertrackingsystem.loginUser"
-    tools:showIn="@layout/activity_login_user">
+    tools:showIn="@layout/activity_login_user"
+    android:background="@drawable/login">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,6 +17,7 @@
         android:layout_marginTop="75dp"/>
 
     <LinearLayout
+        android:id="@+id/login_user_position_1"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:orientation="vertical"
@@ -25,7 +27,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email" />
+            android:text="Email"
+            android:textSize="16dp"
+            android:textColor="@color/colorTextLight"/>
+
+        <!--<com.beardedhen.androidbootstrap.AwesomeTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/colorTextLight"-->
+            <!--app:bootstrapHeading="h3"-->
+            <!--app:roundedCorners="true"-->
+            <!--app:bootstrapText="Share on {fa_facebook} with a {fa_thumbs_o_up}"/>-->
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:layout_width="250dp"
@@ -39,7 +51,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"/>
+            android:text="Password"
+            android:textSize="16dp"
+            android:textColor="@color/colorTextLight"/>
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/bootstrapEditText"
@@ -52,6 +66,7 @@
             app:bootstrapSize="lg" />
 
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/btnLoginUser"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -61,12 +76,22 @@
             app:bootstrapSize="lg"
             app:buttonMode="regular"
             app:roundedCorners="true"
-            app:showOutline="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/bootstrapButton2" />
+            app:showOutline="false"
+            android:layout_centerVertical="true" />
 
     </LinearLayout>
 
 
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/splash_progressBarLogin"
+            style="@style/SpinKitView.Circle"
+            android:layout_below="@+id/login_user_position_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            app:SpinKit_Color="@color/colorPrimary" />
 
 </RelativeLayout>

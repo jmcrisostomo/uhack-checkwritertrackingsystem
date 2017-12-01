@@ -8,4 +8,7 @@
     <color name="colorAccent">#01579B</color>
     <color name="colorTableHeader">#FFA726</color>
     <color name="colorTableContent">#FAFAFA</color>
+
+    <color name="colorTextLight">#f8f9fa</color>
+    <color name="colorTextDark">#343a40</color>
 </resources>

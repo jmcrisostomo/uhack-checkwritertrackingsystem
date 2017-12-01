@@ -4,26 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="uhack.ypsquad.checkwritertrackingsystem.splash">
+    android:background="@drawable/login">
 
-    <TextView
+
+    <!--<TextView-->
+        <!--android:id="@+id/splash_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="200dp"-->
+        <!--android:text="Need Logo Here!" />-->
+
+    <ImageView
+        android:src="@drawable/logo"
         android:id="@+id/splash_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="Need Logo Here!" />
+        android:layout_marginTop="100dp" />
 
     <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/splash_progressBar"
-        style="@style/SpinKitView.Large.FoldingCube"
+        style="@style/SpinKitView.Circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/splash_label"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp"
-        app:SpinKit_Color="@color/colorAccent" />
+        android:layout_marginTop="200dp"
+        app:SpinKit_Color="@color/colorPrimary" />
 
 </RelativeLayout>
